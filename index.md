@@ -1,4 +1,4 @@
-## Projects
+## Projectshttps://github.com/Turreted/turreted.github.io/blob/master/index.md
 
 ---
 
@@ -13,7 +13,7 @@ A chess engine with ~2,000 ELO. This is where I learned firsthand that there are
 
 ---
 ## [Data Science / Bioinformatics Research](/pdf/quad.pdf)
-<img src="images/abeta.png", a="/pdf/quad.pdf"/>
+<a href="/pdf/quad.pdf"><img src="images/abeta.png"/></a>
 
 ---
 
