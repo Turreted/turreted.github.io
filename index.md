@@ -2,7 +2,7 @@
 
 ---
 
-## [How I (Techincally) Hacked the Department of Defense](/sample_page)
+## [How I (Techincally) Hacked the Department of Defense](/_site/sample_page)
 
 A quick writeup on the IDOR exploit I found on an AWS Bucket owned by the DOD.
 
