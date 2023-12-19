@@ -7,7 +7,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br><br>
   <a href="https://www.linkedin.com/in/gideon-mitchell-71559a292/">LinkedIn</a> 
   <br><br>
-  <p><a href="mailto:gideonm@uchicago.edu">Email</a></p>
+  <a href="mailto:gideonm@uchicago.edu">Email</a>
   
   
 remote_theme: pages-themes/minimal@v0.2.0
