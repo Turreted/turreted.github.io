@@ -24,7 +24,7 @@ I'm currentley working under professor [Esmael Haddadian](https://college.uchica
 
 ### Other Projects
 - **[Spotify Lyrics](https://github.com/Turreted/Spotify-Lyrics.git)**: a popular API wrapper for Spotify that retrives the lyrics for whatever you're currently listening to. Integrates OAuth, credential caching, and some web scraping to retrive the lyrics.
-- **[Project Euler Solutions](https://github.com/Turreted/Project-Euler)**: solutions I've written to select [Project Euler](https://projecteuler.net/) problems, which are difficult math/cs challenges. I'm currently working on [problem 360](https://projecteuler.net/problem=360)
+- **[Project Euler Solutions](https://github.com/Turreted/Project-Euler)**: solutions I've written to select [Project Euler](https://projecteuler.net/) problems, which are difficult math/cs challenges. I'm currently working on [problem 360](https://projecteuler.net/problem=360).
 - **[Hack The Box](https://app.hackthebox.com/profile/96971)**: a pentesting platform where I learned a good chunk of my Linux fundamentals. I have 17 user owns and 13 system owns. you can view my profile [Here](https://app.hackthebox.com/profile/96971).
   
 ---
