@@ -1,10 +1,10 @@
 # How I (Technically) Hacked the Department of Defense
 
-It's counterintuitive, but one of the best places to go bug bountying US Department of Defense. It's probably a combination of the massive attack service, dated technology (they still mostly use LAMP), and thin IT support. So here's how I bypassed their web security as 19-year-old with a MacBook.
+It’s counterintuitive, but one of the most accessible bug bounty programs is the one run by the US Department of Defense. This is probably a consequence of the massive attack service, dated technology (they still mostly use the LAMP stack), and thin IT support. So here’s how I bypassed their web security as a 19-year-old with a MacBook.
 
 In keeping with the DOD policy, I've redacted the names of all sites and changed the names of all endpoints. 
 
-I was poking around an some software that supported marine navigation tech when I noticed an interesting endpoint ```https://REDACTED/getAWSFile.php?file=```. I could query a file from it, and it would return the requested file.
+I was poking around some software that supported marine navigation tech when I noticed an interesting endpoint ```https://REDACTED/getAWSFile.php?file=```. I could query a file from it, and it would return the requested file.
 
 Since the site was running LAMP, I figured I would check for [Local File Inclusion (LFI)](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion) bugs, which old PHP applications are sometimes susceptible to. I was running a fuzzing script when I noticed something strange:
 
@@ -19,7 +19,7 @@ python3 lfi_fuzz.py
 .                                  returned 16024 B 
 ```
 
-When I fed "." into the query, it returned 4,000x more data than it should. I quickly tried to reproduce this with curl:
+When I fed "." into the query, it returned **~4,000x** more data than it should. I quickly reproduced it with curl:
 
 ```bash
 curl -i -s -k -X $'GET' \
@@ -57,9 +57,9 @@ which returned the result:
 </ListBucketResult>
 ```
 
-What was happening under the hood was the server was fetching files from an external AWS bucket, and when I fed it the "." character (which stands for 'the current directory' in the Unix shell) the Bucket dumped its entire directory listing and returned it. Since I now had the full path to every file on the bucket, I could just plug them into the file parameter of the request to read any file on the server.
+Clearly, the server was fetching files from an external AWS bucket under the hood. When I fed it the "." character (which stands for 'the current directory' in the Unix shell) the Bucket interpreted it as such and dumped its entire directory listing. Since I now had the full path to every file on the bucket, I could just plug them into the file parameter of the request to read any file on the server.
 
-I picked a random file ***```REDACTED/SiteContent/StaticFiles/data/files/navdata.txt```***, plugged it into the ```getAWSFile.php``` endpoint, and the server returned: 
+To test this, I picked a random file, plugged it into the ```getAWSFile.php``` endpoint, and the server returned: 
 
 ```
 --------------------------------------------------------------------------------
@@ -71,7 +71,8 @@ All libraries corrected through NTM 11/23 (18 March 2023).
 
 -----GENERAL SCALE LIBRARIES: (2)
 
+LOG 12.23.19
 [...]
 ```
 
-I could see and read every file on the bucket. Since the DOD takes their information security pretty seriously, I didn't enumerate any further and I reported it. 
+I tried this with a few more files and found that I could see and read *every file on the bucket*. Since the DOD takes their information security pretty seriously, I didn't enumerate any further and reported it. It was triaged and resolved in 72 hours.
