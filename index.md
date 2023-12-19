@@ -16,7 +16,7 @@ A chess engine with ~2,000 ELO. This is where I learned firsthand that there are
 <a href="/pdf/quad.pdf"><img src="images/abeta.png" style="max-height: 75px; max-width: 100px;"/></a>
 I'm currentley working under professor [Esmael Haddadian](https://college.uchicago.edu/people/esmael-haddadian) to determine the structure of amyloid-beta oligomers using the machine learning program AlphaFold and applied data science tecniques.
 
-- You can read my abstract for the Biophysical Society [Here](/pdf/bps.pdf).
+- You can read my abstract for the Biophysical Society [Here](/pdf/BPS.pdf).
 - You can read my successful appliation for the Quad Research Scholars Grant [Here](/pdf/quad.pdf).
 ---
 
