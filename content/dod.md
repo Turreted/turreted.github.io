@@ -10,13 +10,13 @@ Since the site was running LAMP, I figured I would check for [Local File Inclusi
 
 ```bash
 python3 lfi_fuzz.py
-../../../etc/passwd                               returned 413 B
-../../../etc/passwd............                   returned 413 B
-%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd returned 413 B
+../../../etc/passwd                returned 413 B
+../../../etc/passwd..........      returned 413 B
+%c0%ae%c0%ae/etc/passwd            returned 413 B
 
 [...]
 
-.                                                 returned 16024 B 
+.                                  returned 16024 B 
 ```
 
 When I fed "." into the query, it returned 4,000x more data than it should. I quickly tried to reproduce this with curl:
@@ -59,7 +59,7 @@ which returned the result:
 
 What was happening under the hood was the server was fetching files from an external AWS bucket, and when I fed it the "." character (which stands for 'the current directory' in the Unix shell) the Bucket dumped its entire directory listing and returned it. Since I now had the full path to every file on the bucket, I could just plug them into the file parameter of the request to read any file on the server.
 
-I picked a random file ```REDACTED/SiteContent/StaticFiles/data/files/navdata.txt```, plugged it into the ```getAWSFile.php``` endpoint, and the server returned: 
+I picked a random file ***```REDACTED/SiteContent/StaticFiles/data/files/navdata.txt```***, plugged it into the ```getAWSFile.php``` endpoint, and the server returned: 
 
 ```
 --------------------------------------------------------------------------------
