@@ -13,7 +13,8 @@ A chess engine with ~2,000 ELO. This is where I learned firsthand that there are
 
 ---
 ## [Bioinformatics & Data Science Research](/pdf/quad.pdf)
-<a href="/pdf/quad.pdf"><img src="images/abeta.png" style="max-height: 75px; max-width: 100px;"/></a>
+<a href="/pdf/quad.pdf"><img src="images/abeta.png" style="width: 60%; height: 60%"/></a>
+
 I'm currentley working under professor [Esmael Haddadian](https://college.uchicago.edu/people/esmael-haddadian) to determine the structure of amyloid-beta oligomers using the machine learning program AlphaFold and applied data science tecniques.
 
 - You can read my abstract for the Biophysical Society [Here](/pdf/BPS.pdf).
