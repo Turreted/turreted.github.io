@@ -6,6 +6,8 @@ description: > # your text below (remove <br> elements if you don't need line br
   <a href="/pdf/resume.pdf">Resume</a> 
   <br><br>
   <a href="https://www.linkedin.com/in/gideon-mitchell-71559a292/">LinkedIn</a> 
+  <br><br>
+  <p><a href="mailto:gideonm@uchicago.edu">Email</a></p>
   
   
 remote_theme: pages-themes/minimal@v0.2.0
