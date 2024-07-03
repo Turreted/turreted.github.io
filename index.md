@@ -7,7 +7,7 @@
 A quick writeup on the IDOR exploit I found on an AWS Bucket owned by the DOD.
 
 ---
-## [Mackerel - A Chess Engline Written in Pure C](https://github.com/Turreted/Mackerel)
+## [Mackerel - A Chess Engine Written in Pure C](https://github.com/Turreted/Mackerel)
 
 A chess engine with ~2,000 ELO. This is where I learned firsthand that there are horrible horrible bugs that can happen when you mix low-level C programming, recursion, and custom hashing methods.
 
